@@ -1,0 +1,58 @@
+<h1 class= "fontsyt">Login In Style</h1>
+<!--The Guy Image-->
+<!--<%=image_tag 'bg.jpg', :width => 1300, :height => 600, :crop => :fill %>-->
+
+<!--<img src="/assets/guy.png">-->
+
+
+
+<body  style=" background:url('/assets/style.jpg'); background-repeat:no-repeat; background-size: cover;">
+
+
+  <form method="get" action="/login/check">
+   <input type="text" name="username" id="username"size="15" placeholder="username" /><br />
+   <input type="password" name="password" id="password" size="15" placeholder="password"/><br />
+   
+   <p><input style="position:absolute;  left:40px" type="submit"  value="login" onclick=" return val()"/></p>
+   </form>
+<br>
+<br>
+<font style= "color :#FFFF00">-----------------------------%----------------------------------------- </font>
+
+<h1 style= "color:#FFFFFF"> NEW USER ????- Join the Race </h1>
+  <form method="get" action="/login/new_user">
+  <font class= "fontsyt">Username: </font> <input type="text" name="username" id="username"size="15" /><br />
+  <font class= "fontsyt">Password: </font> <input type="password" name="password" id="password" size="15" /><br />
+  <font class= "fontsyt">Email: </font> <input style="position:absolute;  left:80px" type="text" name="email" id="email" size="15" /><br />
+   
+   <p><input type="submit"  value="Register" onclick = "/login/show" />
+   <input type="reset"  value="clear" /></p>
+   </form>
+
+<style>
+.fontsyt
+{
+	text-shadow: 5px 5px 5px #FFFF00;
+	font-family: Times New Roman; 
+	color: #FFFFFF; 
+    font-style:Italics
+}
+-----------------------------%-----------------------------------------
+
+<!--Java Script code for Validating empty fields-->
+<script>
+function val()
+{
+var user=document.getElementById("username").value
+var pass=document.getElementById("password").value
+if (user == "" || pass == "")
+{
+alert("Input values cannot be empty buddy!!");
+return false;
+}
+else
+{
+return true;
+}
+}
+</script>

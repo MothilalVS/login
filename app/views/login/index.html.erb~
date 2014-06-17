@@ -1,0 +1,34 @@
+<h1>Login Page</h1>
+<!--The Guy Image-->
+<%=image_tag 'bg.jpg', :width => 1300, :height => 600, :crop => :fill %>
+
+<img src="/assets/guy.png">
+<div align="centre">
+<%= form_tag("/login/check", method: "get") do %>
+<%= label_tag("User Name") %>
+<%= text_field_tag(:username)%>
+<br>
+<%= label_tag("Pass Word:") %>
+<%= password_field_tag(:password)%>
+<%= submit_tag "Login", :onclick => "return val()" %>
+<% end %>
+</div>
+<br>
+-----------------------------%-----------------------------------------
+<!--Java Script code for Validating empty fields-->
+<script>
+function val()
+{
+var user=document.getElementById("username").value
+var pass=document.getElementById("password").value
+if (user == "" || pass == "")
+{
+alert("Input values cannot be empty buddy!!");
+return false;
+}
+else
+{
+return true;
+}
+}
+</script>
