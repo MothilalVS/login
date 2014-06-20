@@ -1,4 +1,0 @@
-Hi u r secure user!
-
-<%=@username%>
-<%=@password%>
